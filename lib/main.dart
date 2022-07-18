@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
           title: Row(
@@ -18,23 +19,38 @@ class MyApp extends StatelessWidget {
               Container(
                 child: Text(
                   '친구',
-                  style: TextStyle(color: Colors.black),
+                  style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
                 ),
               ),
               Container(
                 margin: EdgeInsets.all(10),
                 child: Row(
-                  children: [
-                    Icon(Icons.search),
-                    Icon(Icons.search),
+                  children:[
+                    Icon(Icons.search, color: Colors.black),
+                    SizedBox(width: 21.5,),
+                    Icon(Icons.person_add_alt, color: Colors.black),
+                    SizedBox(width: 17,),
+                    Icon(Icons.music_note_outlined, color: Colors.black),
+                    SizedBox(width: 20,),
+                    Icon(Icons.settings_outlined, color: Colors.black),
                   ],
                 ),
               ),
             ],
           ),
-          // backgroundColor: Colors.white,
+          backgroundColor: Colors.white,
         ),
-        body: Text('Hello world!'),
+        body: Container(
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
+            child: Row(
+              children: [
+                Image.asset('empty_profile.jpg', width: 80, height: 80, )
+              ],
+            ),
+          ),
+        ),
+        backgroundColor: Colors.white,
       )
     );
   }
