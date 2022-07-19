@@ -19,11 +19,11 @@ class MyApp extends StatelessWidget {
               Container(
                 child: Text(
                   '친구',
-                  style: TextStyle(color: Colors.black, fontWeight: FontWeight.w600),
+                  style: TextStyle(color: Colors.black, fontWeight: FontWeight.w600, fontSize: 23),
                 ),
               ),
               Container(
-                margin: EdgeInsets.all(15),
+                // margin: EdgeInsets.all(15),
                 child: Row(
                   children:[
                     Icon(Icons.search, color: Colors.black),
@@ -50,12 +50,12 @@ class MyApp extends StatelessWidget {
                   children: [
                     Container(
                       child: ClipRRect(
-                        borderRadius: BorderRadius.circular(20.0),
-                        child: Image.asset('assets/empty_profile.jpg', width: 50, height: 50, ),
+                        borderRadius: BorderRadius.circular(25.0),
+                        child: Image.asset('assets/empty_profile.jpg', width: 60, height: 60, ),
                       ),
                     ),
-                    SizedBox(width: 10,),
-                    Text("준호", style: TextStyle(color: Colors.black, fontWeight: FontWeight.w500),)
+                    SizedBox(width: 15,),
+                    Text("준호", style: TextStyle(color: Colors.black, fontWeight: FontWeight.w500, fontSize: 18),)
                   ],
                 ),
               ),
@@ -64,6 +64,33 @@ class MyApp extends StatelessWidget {
             Divider(thickness: 2, color: Color(0xfffafafa),)
           ],
         ),
+          bottomNavigationBar: BottomNavigationBar(
+              type: BottomNavigationBarType.fixed,
+              onTap: (index) => {},
+              currentIndex: 0,
+              items: const  [
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.person),
+                  label: '',
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.person),
+                  label: '',
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.person),
+                  label: '',
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.person),
+                  label: '',
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.person),
+                  label: '',
+                )
+              ]
+          ),
         backgroundColor: Colors.white,
       )
     );
