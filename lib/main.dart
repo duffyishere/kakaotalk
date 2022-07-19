@@ -19,11 +19,11 @@ class MyApp extends StatelessWidget {
               Container(
                 child: Text(
                   '친구',
-                  style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+                  style: TextStyle(color: Colors.black, fontWeight: FontWeight.w600),
                 ),
               ),
               Container(
-                margin: EdgeInsets.all(10),
+                margin: EdgeInsets.all(15),
                 child: Row(
                   children:[
                     Icon(Icons.search, color: Colors.black),
@@ -39,16 +39,30 @@ class MyApp extends StatelessWidget {
             ],
           ),
           backgroundColor: Colors.white,
+          elevation: 0,
         ),
-        body: Container(
-          child: Padding(
-            padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
-            child: Row(
-              children: [
-                Image.asset('empty_profile.jpg', width: 80, height: 80, )
-              ],
+        body: Column(
+          children: [
+            Container(
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(15, 10, 15, 0),
+                child: Row(
+                  children: [
+                    Container(
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(20.0),
+                        child: Image.asset('assets/empty_profile.jpg', width: 50, height: 50, ),
+                      ),
+                    ),
+                    SizedBox(width: 10,),
+                    Text("준호", style: TextStyle(color: Colors.black, fontWeight: FontWeight.w500),)
+                  ],
+                ),
+              ),
             ),
-          ),
+            SizedBox(height: 5,),
+            Divider(thickness: 2, color: Color(0xfffafafa),)
+          ],
         ),
         backgroundColor: Colors.white,
       )
