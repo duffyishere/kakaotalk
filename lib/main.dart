@@ -66,27 +66,28 @@ class MyApp extends StatelessWidget {
         ),
           bottomNavigationBar: BottomNavigationBar(
               type: BottomNavigationBarType.fixed,
+              backgroundColor: Color(0xfff9f9f9),
               onTap: (index) => {},
               currentIndex: 0,
               items: const  [
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.person),
+                  icon: Icon(Icons.person, size: 30,),
                   label: '',
                 ),
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.person),
+                  icon: Icon(Icons.person, size: 30,),
                   label: '',
                 ),
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.person),
+                  icon: Icon(Icons.person, size: 30,),
                   label: '',
                 ),
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.person),
+                  icon: Icon(Icons.person, size: 30,),
                   label: '',
                 ),
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.person),
+                  icon: Icon(Icons.person, size: 30,),
                   label: '',
                 )
               ]
