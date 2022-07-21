@@ -46,22 +46,46 @@ class MyApp extends StatelessWidget {
             Container(
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(15, 10, 15, 0),
-                child: Row(
+                child: Column(
                   children: [
-                    Container(
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(25.0),
-                        child: Image.asset('assets/empty_profile.jpg', width: 60, height: 60, ),
-                      ),
+                    Row(
+                      children: [
+                        Container(
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(25.0),
+                            child: Image.asset('assets/empty_profile.jpg', width: 60, height: 60, ),
+                          ),
+                        ),
+                        SizedBox(width: 15,),
+                        Text("준호", style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 18),),
+                      ],
                     ),
-                    SizedBox(width: 15,),
-                    Text("준호", style: TextStyle(color: Colors.black, fontWeight: FontWeight.w500, fontSize: 18),)
+                    SizedBox(height: 10,),
+                    Divider(thickness: 2, color: Color(0xfffafafa),),
+                    SizedBox(height: 5,),
+                    Row(
+                      children: [
+                        Text("내 멀티프로필", style: TextStyle(color: Colors.grey, fontWeight: FontWeight.w200, fontSize: 12),),
+                      ],
+                    ),
+                    SizedBox(height: 5,),
+                    Row(
+                      children: [
+                        SizedBox(height: 5,),
+                        Container(
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(18.0),
+                            child: Image.asset('assets/plus_icon.jpg', width: 45, height: 45, ),
+                          ),
+                        ),
+                        SizedBox(width: 10,),
+                        Text("친구별로 다른 프로필을 설정해보세요!", style: TextStyle(color: Colors.black, fontWeight: FontWeight.w500, fontSize: 15.5),),
+                      ],
+                    )
                   ],
                 ),
               ),
             ),
-            SizedBox(height: 5,),
-            Divider(thickness: 2, color: Color(0xfffafafa),)
           ],
         ),
           bottomNavigationBar: BottomNavigationBar(
