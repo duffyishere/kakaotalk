@@ -120,7 +120,7 @@ class MyApp extends StatelessWidget {
                 ),
                 Column(
                   children: const [
-                    SizedBox(height: 10,),
+                    SizedBox(height: 5,),
                     Divider(thickness: 2, color: Color(0xfffafafa),),
                     SizedBox(height: 10,),
                   ],
@@ -137,7 +137,41 @@ class MyApp extends StatelessWidget {
                       Expanded(flex: 100, child: Image.asset('assets/new_profiles.jpg',),)
                     ],
                   ),
-                )
+                ),
+                Column(
+                  children: const [
+                    SizedBox(height: 5,),
+                    Divider(thickness: 2, color: Color(0xfffafafa),),
+                    SizedBox(height: 10,),
+                  ],
+                ),
+                Row(
+                  children: const [
+                    Text("추천친구", style: TextStyle(color: Colors.grey, fontWeight: FontWeight.w100, fontSize: 12),),
+                  ],
+                ),
+                SizedBox(height: 5,),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      child: Row(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(18.0),
+                            child: Image.asset('assets/new_friends.jpg', width: 45, height: 45, ),
+                          ),
+                          SizedBox(width: 10,),
+                          Text("새로운 친구를 만나보세요!", style: TextStyle(color: Colors.black, fontWeight: FontWeight.w500, fontSize: 15.5),),
+                        ],
+                      ),
+                    ),
+                    Container(
+                        margin: EdgeInsets.fromLTRB(0, 0, 15, 0),
+                        child: Text("100 ⟩", style: TextStyle(color: Colors.grey),)
+                    )
+                  ],
+                ),
               ],
             ),
           ),
