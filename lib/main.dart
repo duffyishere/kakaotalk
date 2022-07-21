@@ -43,7 +43,7 @@ class MyApp extends StatelessWidget {
         ),
         body: Container(
           child: Padding(
-            padding: const EdgeInsets.fromLTRB(15, 10, 15, 0),
+            padding: const EdgeInsets.fromLTRB(15, 10, 0, 0),
             child: Column(
               children: [
                 Row(
@@ -58,9 +58,13 @@ class MyApp extends StatelessWidget {
                     Text("준호", style: TextStyle(color: Colors.black, fontWeight: FontWeight.w500, fontSize: 18),),
                   ],
                 ),
-                SizedBox(height: 10,),
-                Divider(thickness: 2, color: Color(0xfffafafa),),
-                SizedBox(height: 5,),
+                Column(
+                  children: const [
+                    SizedBox(height: 10,),
+                    Divider(thickness: 2, color: Color(0xfffafafa),),
+                    SizedBox(height: 5,),
+                  ],
+                ),
                 Row(
                   children: const [
                     Text("내 멀티프로필", style: TextStyle(color: Colors.grey, fontWeight: FontWeight.w100, fontSize: 12),),
@@ -80,9 +84,13 @@ class MyApp extends StatelessWidget {
                     Text("친구별로 다른 프로필을 설정해보세요!", style: TextStyle(color: Colors.black, fontWeight: FontWeight.w500, fontSize: 15.5),),
                   ],
                 ),
-                SizedBox(height: 10,),
-                Divider(thickness: 2, color: Color(0xfffafafa),),
-                SizedBox(height: 5,),
+                Column(
+                  children: const [
+                    SizedBox(height: 10,),
+                    Divider(thickness: 2, color: Color(0xfffafafa),),
+                    SizedBox(height: 5,),
+                  ],
+                ),
                 Row(
                   children: const [
                     Text("생일인 친구", style: TextStyle(color: Colors.grey, fontWeight: FontWeight.w100, fontSize: 12),),
@@ -105,10 +113,31 @@ class MyApp extends StatelessWidget {
                       ),
                     ),
                     Container(
+                      margin: EdgeInsets.fromLTRB(0, 0, 15, 0),
                       child: Text("5 ⟩", style: TextStyle(color: Colors.grey),)
                     )
                   ],
                 ),
+                Column(
+                  children: const [
+                    SizedBox(height: 10,),
+                    Divider(thickness: 2, color: Color(0xfffafafa),),
+                    SizedBox(height: 10,),
+                  ],
+                ),
+                Row(
+                  children: const [
+                    Text("업데이트한 친구 10", style: TextStyle(color: Colors.grey, fontWeight: FontWeight.w100, fontSize: 12),),
+                  ],
+                ),
+                SizedBox(height: 10,),
+                Container(
+                  child: Row(
+                    children: [
+                      Expanded(flex: 100, child: Image.asset('assets/new_profiles.jpg',),)
+                    ],
+                  ),
+                )
               ],
             ),
           ),
